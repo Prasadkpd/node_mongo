@@ -9,7 +9,7 @@ MongoClient.connect(url, function (error, db) {
     } else {
         console.log('Connect to', url);
         let dbo = db.db('myDB');
-        dbo.collection("customers").findOne({}, function (err, res) {
+        dbo.collection("customers").find({}).toArray( function (err, res) {
             if (err) {
                 console.log(err);
             } else {
