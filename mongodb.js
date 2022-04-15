@@ -1,7 +1,7 @@
 const mongodb = require('mongodb');
 const MongoClient = mongodb.MongoClient;
 
-const url = 'mongodb://localhost:27017/fruits'
+const url = 'mongodb://localhost:27017/myDB'
 
 MongoClient.connect(url, function (error, db) {
     if (error) {
